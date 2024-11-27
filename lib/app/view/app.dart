@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mentoras/counter/counter.dart';
 import 'package:mentoras/l10n/l10n.dart';
+import 'package:mentoras/user_type/view/user_type_selection_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,6 +8,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const UserTypeSelectionPage(),
     );
   }
 }
